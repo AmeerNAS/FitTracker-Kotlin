@@ -175,7 +175,7 @@ class DashboardFragmentBackUp : Fragment() {
         }
     }*/
 
-    // AndroidSVG approach
+    // Old AndroidSVG approach
     /*fun colorSvgGroup(imageView: ImageView, groupId: String, fillColor: Int) {
         try {
             // Load SVG from res/raw
@@ -197,7 +197,29 @@ class DashboardFragmentBackUp : Fragment() {
         } catch (e: Exception) {
             e.printStackTrace()
         }
-    }*/
+    } Old AndroidSVG approach
+    /*fun colorSvgGroup(imageView: ImageView, groupId: String, fillColor: Int) {
+        try {
+            // Load SVG from res/raw
+            val svg = SVG.getFromResource(imageView.context, R.raw.bg_muscles)
+
+            // Get the group by its ID
+            val group = svg.getElementById(groupId)
+            if (group is com.caverock.androidsvg.SVG.SvgConditionalContainer) {
+                group.baseStyle.fill = com.caverock.androidsvg.SVG.Colour(fillColor)
+            }
+
+            // Render to PictureDrawable and set it to the ImageView
+            val picture = svg.renderToPicture()
+            val drawable = PictureDrawable(picture)
+
+            imageView.setLayerType(ImageView.LAYER_TYPE_SOFTWARE, null) // Disable hardware accel for SVG
+            imageView.setImageDrawable(drawable)
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
 
     private fun setupBodyOverlay(container: FrameLayout) {
         muscleDrawables.forEach { (muscle, drawableRes) ->

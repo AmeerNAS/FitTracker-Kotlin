@@ -1,33 +1,27 @@
-package com.example.fittracker.fragments
+package com.example.fittracker.ui.dashboard
 
+import androidx.fragment.app.testing.launchFragmentInContainer
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import org.junit.Before
-import org.junit.Rule
+import com.example.fittracker.R
+import org.hamcrest.CoreMatchers.containsString
+import org.junit.Test
 import org.junit.runner.RunWith
+import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.matcher.ViewMatchers.*
+import androidx.test.espresso.assertion.ViewAssertions.matches
 
-
-@UninstallModules(AppModule::class)
 @RunWith(AndroidJUnit4::class)
 class DashboardFragmentTest {
 
-    @get:Rule
-    val hiltRule = HiltAndroidRule(this)
-
-    @Before
-    fun setup() {
-        hiltRule.inject()
-    }
-
     @Test
-    fun showsGrayBodyWhenNoWorkouts() {
+    fun dashboard_showsGrayWhenNoWorkouts() {
         launchFragmentInContainer<DashboardFragment>()
-        onView(withId(R.id.body_container)).check(matches(isDisplayed()))
-        onView(withId(R.id.bestMuscleGroups)).check(matches(withText(containsString("-"))))
-    }
 
-    @Test
-    fun updatesColorsAfterWorkoutLogs() {
-        // Prepopulate DB with some workout
-        // Then launch fragment and verify color change
+        // Body graph container exists
+        onView(withId(R.id.body_container)).check(matches(isDisplayed()))
+
+        // Best muscle groups text is shown with "-"
+        onView(withId(R.id.best_muscle_groups))
+            .check(matches(withText(containsString("-"))))
     }
 }

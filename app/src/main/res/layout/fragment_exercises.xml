@@ -9,14 +9,14 @@
     android:background="#121212"
     android:padding="16dp">
 
-    <!-- 💪 Add Exercise Button -->
+
     <Button
         android:id="@+id/btnAddExercise"
         style="@style/PrimaryButton"
         android:text="Add Exercise"
         android:layout_marginBottom="16dp" />
 
-    <!-- 📋 Exercise List -->
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="0dp"

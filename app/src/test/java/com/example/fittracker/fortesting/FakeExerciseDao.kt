@@ -6,9 +6,12 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 
 class FakeExerciseDao : ExerciseDao {
+
+    private val exercises = mutableListOf<ExerciseEntity>()
     private val exercisesFlow = MutableStateFlow<List<ExerciseEntity>>(emptyList())
     override suspend fun insert(exercise: ExerciseEntity): Long {
-        TODO("Not yet implemented")
+        exercises.add(exercise.copy(id = (exercises.size + 1).toLong()))
+        return exercises.size.toLong()
     }
 
 

@@ -71,10 +71,7 @@ dependencies {
     // optional - Kotlin Extensions and Coroutines support for Room
     implementation("androidx.room:room-ktx:${room_version}")
     // If this project uses any Kotlin source, use Kotlin Symbol Processing (KSP)
-    // See Add the KSP plugin to your project
     ksp("androidx.room:room-compiler:$room_version")
-
-    // optional - Kotlin Extensions and Coroutines support for Room
 
 
     // tests
@@ -86,11 +83,21 @@ dependencies {
     testImplementation("io.mockk:mockk:1.13.5")
 
     //Instrumental
+    testImplementation("org.hamcrest:hamcrest:2.2")
+    androidTestImplementation("org.hamcrest:hamcrest:2.2")
+
     //espresso
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation("androidx.test.espresso:espresso-contrib:3.5.1")
 
     androidTestImplementation("androidx.test:runner:1.5.2")
-    androidTestImplementation("androidx.test:rules:1.5.2")
+    androidTestImplementation("androidx.test:rules:1.5.0")
+
+    // Fragments testing
+    val fragment_version = "1.8.9"
+
+    debugImplementation("androidx.fragment:fragment-testing-manifest:$fragment_version")
+    androidTestImplementation("androidx.fragment:fragment-testing:$fragment_version")
 
 
     //why

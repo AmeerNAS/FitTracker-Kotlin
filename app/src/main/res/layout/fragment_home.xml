@@ -28,7 +28,7 @@
                     android:id="@+id/todayTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Today’s Workout 💪"
+                    android:text="@string/today_workout"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="#FFFFFF" />
@@ -37,7 +37,7 @@
                     android:id="@+id/todaySummary"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="No workouts today!"
+                    android:text="@string/no_workouts_summary"
                     android:textColor="#CCCCCC"
                     android:layout_marginTop="8dp" />
             </LinearLayout>
@@ -60,7 +60,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Workout Calendar 📅"
+                    android:text="@string/workout_calendar"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="#FFFFFF" />
@@ -92,7 +92,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Statistics 📈"
+                    android:text="Statistics"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="#FFFFFF" />
@@ -134,7 +134,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="16dp"
-                    android:text="No workout data found 😓"
+                    android:text="No workout data found!"
                     android:textSize="18sp"
                     android:textColor="#CCCCCC"
                     android:gravity="center"
