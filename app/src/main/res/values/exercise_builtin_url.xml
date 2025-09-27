@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Map exercise names to YouTube tutorial URLs -->
+    <string name="video_bench_press">https://youtube.com/shorts/0cXAp6WhSj4?si=8obfwdtGLImG_g2A</string>
+    <string name="video_squat">https://youtube.com/shorts/iZTxa8NJH2g?si=OBp3kl8ft6J1knvW</string>
+    <string name="video_deadlift">https://youtube.com/shorts/8np3vKDBJfc?si=kUmBOo0DpcE4w5bw</string>
+    <string name="video_running">https://www.youtube.com/watch?v=video_id4</string>
+    <string name="video_biceps_curl">hi</string>
+    <string name="video_neck_harness">hi</string>
+    <string name="video_plank">hi</string>
+    <string name="video_shoulder_press">hi</string>
+    <string name="video_pull_up">hi</string>
+
+
+</resources>

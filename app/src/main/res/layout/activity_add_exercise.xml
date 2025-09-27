@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/add_exercise_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    android:paddingTop="?android:attr/actionBarSize"
+    >
+<!--    android:fitsSystemWindows="true"-->
+    <EditText
+        android:id="@+id/inputExerciseName"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:hint="Exercise Name" />
+
+    <AutoCompleteTextView
+        android:id="@+id/inputMuscleGroup"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:hint="Muscle Group"
+        android:inputType="none"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:clickable="true"
+        android:dropDownHeight="wrap_content"
+        android:dropDownVerticalOffset="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/inputDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:hint="Description"
+            android:inputType="textCapSentences|textNoSuggestions|textMultiLine"
+            android:maxLines="6"
+            android:minLines="3" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/addExerciseBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Exercise" />
+
+    <ListView
+        android:id="@+id/exerciseListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

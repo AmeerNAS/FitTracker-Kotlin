@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/detail_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/black_less">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/dark_gray">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+
+                <TextView
+                    android:id="@+id/exerciseName"
+                    style="@style/CardTitle"
+                    android:text="Exercise Name" />
+
+                <TextView
+                    android:id="@+id/muscleGroup"
+                    style="@style/CardBodyText"
+                    android:layout_marginTop="8dp"
+                    android:text="Muscle Group" />
+
+                <TextView
+                    android:id="@+id/exerciseDescription"
+                    style="@style/CardBodyText"
+                    android:layout_marginTop="8dp"
+                    android:text="Exercise description goes here." />
+
+
+                <WebView
+                    android:id="@+id/videoContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/black" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <Button
+            android:id="@+id/btnStartExercise"
+            style="@style/PrimaryButton"
+            android:layout_marginTop="24dp"
+            android:text="Start Exercise" />
+
+
+        <Button
+            android:id="@+id/btnMarkDone"
+            style="@style/PrimaryButton"
+            android:layout_marginTop="12dp"
+            android:text="Mark as Done" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Back Button -->
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/PrimaryButton"
+            android:layout_width="wrap_content"
+            android:layout_gravity="end"
+            android:text="Back" />
+
+</LinearLayout>

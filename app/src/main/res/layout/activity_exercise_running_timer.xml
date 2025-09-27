@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/exercise_running_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@color/black_less">
+
+
+    <TextView
+        android:id="@+id/stepsCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Steps go here"
+        android:textSize="40sp"
+        android:textColor="@color/blue_accent"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginBottom="20dp" />
+
+    <Chronometer
+        android:id="@+id/simpleChronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="48sp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-medium" />
+
+
+    <Button
+        android:id="@+id/btnFinish"
+        style="@style/PrimaryButton"
+        android:layout_width="wrap_content"
+        android:text="Finish Run"
+        android:layout_marginTop="32dp" />
+</LinearLayout>

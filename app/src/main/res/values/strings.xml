@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">FitTracker</string>
+    <string name="title_home">Home</string>
+    <string name="title_goal_board">Dashboard</string>
+    <string name="title_exercises">Exercises</string>
+    <string name="title_notifications">notifications</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="dash_MuscleProg">Ranked Body graph</string>
+
+    <!--    Home Fragment-->
+    <string name="lifetime_stats">
+        Workouts: %1$d\n
+        Total Volume: %2$d\n
+        Exercises Logged: %3$d
+    </string>
+    <string name="statistics">Statistics</string>
+    <string name="workout_calendar">Workout Calendar</string>
+    <string name="no_workouts_summary">No workouts yet.</string>
+    <string name="today_workout">Today\'s Workout</string>
+
+    <!--    Dashboard-->
+    <string name="no_workout_calender">No workouts yet.\nLog your first exercise to see progress!</string>
+    <string name="loading">Loading...</string>
+
+    <string name="top_muscle_groups">
+        1. %1$s\n2. %2$s\n3. %3$s
+    </string>
+
+    <!--    Exercises-->
+    <string name="elapsed_time_abstract">Elapsed Time: 0m 0s</string>
+    <string name="weight_kg">Weight (kg)</string>
+    <string name="reps">Reps</string>
+    <string name="sets">Sets</string>
+    <string name="best_muscle_groups_will_appear_here">Best muscle groups will appear here</string>
+</resources>
