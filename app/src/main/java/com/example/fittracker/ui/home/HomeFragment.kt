@@ -18,6 +18,26 @@ import com.example.fittracker.R
 import com.example.fittracker.data.local.db.AppDatabase
 import kotlinx.coroutines.launch
 
+/**
+ * HomeFragment
+ *
+ * The main dashboard fragment displaying workout summaries and lifetime stats.
+ *
+ * Responsibilities:
+ * - Shows today's workout summary (exercises, volume, muscles trained).
+ * - Displays lifetime statistics or an empty state if no data is present.
+ * - Reactively observes data from [HomeViewModel] using Kotlin Flows.
+ * - Provides a [CalendarView] (currently placeholder) for future date-based features.
+ *
+ * Features:
+ * - Uses [repeatOnLifecycle] for lifecycle-aware data collection.
+ * - Dynamically updates the UI based on whether data is available.
+ *
+ * Dependencies:
+ * - [AppDatabase]: for retrieving workout data.
+ *
+ * Layout: `fragment_home.xml`
+ */
 class HomeFragment : Fragment() {
 
     private val viewModel: HomeViewModel by viewModels {

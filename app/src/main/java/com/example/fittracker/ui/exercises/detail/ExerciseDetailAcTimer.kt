@@ -13,7 +13,23 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.fittracker.databinding.ActivityExerciseTimerBinding
 import java.util.Locale
 
-
+/**
+ * ExerciseDetailAcTimer
+ *
+ * A simple timer activity used for tracking the duration of non-running exercises.
+ *
+ * Responsibilities:
+ * - Starts a chronometer when the activity is launched.
+ * - Sends the elapsed time and exercise ID back to the calling activity when finished.
+ *
+ * Usage:
+ * This activity is launched when the user starts an exercise (except "Running").
+ * It provides a minimal UI with a timer and a "Finish" button.
+ *
+ * Data Passed:
+ * - Input: [EXTRA_EXERCISE_ID] (Long) — ID of the current exercise.
+ * - Output: [EXTRA_ELAPSED_TIME] (Long) — Time spent on the exercise.
+ */
 class ExerciseDetailAcTimer : AppCompatActivity() {
 
     private lateinit var binding: ActivityExerciseTimerBinding

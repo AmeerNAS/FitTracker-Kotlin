@@ -13,11 +13,33 @@ import kotlinx.coroutines.flow.map
 
 import java.util.Calendar
 
+/**
+ * ForUI
+ *
+ * Represents the UI state of lifetime workout statistics.
+ * Used to simplify UI logic by encapsulating the presence or absence of data.
+ *
+ * Variants:
+ * - [Empty]: No workout data available.
+ * - [HasData]: Contains lifetime statistics for workouts.
+ */
 sealed class ForUI {
     object Empty : ForUI()
     data class HasData(val stats: LifetimeStats) : ForUI()
 }
 
+
+/**
+ * HomeViewModel
+ *
+ * ViewModel for the Home screen, providing workout summaries and lifetime statistics.
+ *
+ * Responsibilities:
+ * - Exposes a Flow of daily workout summaries ('summaries').
+ * - Provides the ability to fetch today's workout summary ('getTodaySummary').
+ * - Maps workout summaries into UI-friendly sealed class states (f'orUI') to represent
+ *   either empty data or statistics.
+**/
 class HomeViewModel(
     private val dailySummaryDao: DailySummaryDao
 ) : ViewModel() {
@@ -66,6 +88,15 @@ class HomeViewModel(
     }
 }
 
+
+
+/**
+ * LifetimeStats
+ *
+ * @property totalWorkouts The total number of workouts performed.
+ * @property totalVolume The total workout volume (e.g., sum of weights lifted).
+ * @property totalExercises The total count of exercises completed across all workouts.
+ */
 data class LifetimeStats(
     val totalWorkouts: Int,
     val totalVolume: Int,

@@ -58,6 +58,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.junit.ktx)
 
     //AndroidSVG
     //implementation("com.caverock:androidsvg:1.4")
@@ -84,6 +85,15 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     testImplementation("io.mockk:mockk:1.13.5")
 
+    //Instrumental
+    //espresso
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
+    androidTestImplementation("androidx.test:runner:1.5.2")
+    androidTestImplementation("androidx.test:rules:1.5.2")
+
+
     //why
     testImplementation("org.threeten:threetenbp:1.6.8:no-tzdb")
+    testImplementation(kotlin("test"))
 }

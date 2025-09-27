@@ -24,6 +24,24 @@ import com.example.fittracker.databinding.ActivityExerciseDetailBinding
 import com.example.fittracker.ui.util.applySystemBarPadding
 import com.example.fittracker.ui.exercises.detail.map_of_embeds
 
+/**
+ * ExerciseDetailActivity
+ *
+ * This activity displays detailed information about a selected exercise,
+ * including its name, description, muscle group, and a related video (if available).
+ * It also allows the user to:
+ * - Start the exercise (timer or running-specific)
+ * - Mark the exercise as done (log sets, reps, weight)
+ * - Handles the Dialog to mark the exercise as done.
+ *
+ * Usage:
+ * This activity is launched when the user clicks on an exercise.
+ * It provides complete overview of the exercise entity with 2 buttons, "Mark as done" and a "Start Exercise" button.
+ *
+ * Data Passed:
+ * - Input: [EXTRA_EXERCISE_ID] (Int) — ID of the current exercise.
+ *
+ */
 class ExerciseDetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityExerciseDetailBinding

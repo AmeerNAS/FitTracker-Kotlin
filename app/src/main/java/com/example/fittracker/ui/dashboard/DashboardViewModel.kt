@@ -8,6 +8,24 @@ import com.example.fittracker.data.local.dao.WorkoutLogDao
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.first
 
+/**
+ * DashboardViewModel
+ *
+ * ViewModel for the Dashboard fragment, responsible for aggregating workout volume data
+ * per muscle.
+ *
+ * Retrieves all exercises and workout logs from local DAOs.
+ * Maps exercise IDs to their corresponding muscle groups.
+ * Calculates total training volume per muscle group by combining:
+ *     `volume = sets × reps × weight`
+ *
+ *
+ * Uses [combine] to reactively merge exercise and workout log flows.
+ *
+ * Dependencies:
+ * - [ExerciseDao]
+ * - [WorkoutLogDao]
+ */
 class DashboardViewModel(
     private val exerciseDao: ExerciseDao,
     private val workoutLogDao: WorkoutLogDao

@@ -9,6 +9,17 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
+/**
+ * ExercisesViewModel
+ *
+ * The ExercisesFragment View Model.
+ *
+ * simple backend that integrates exercises model as:
+ * - val [exercises]: StateFlow<List<Exercise>>
+ *
+ * And ensures the database is seeded with [ensureSeeded] that calls:
+ * - [repo]'s seedExercises function
+**/
 class ExercisesVM(private val repo: ExerciseRepo) : ViewModel() {
 
     val exercises: StateFlow<List<Exercise>> = repo.getExercises().stateIn(

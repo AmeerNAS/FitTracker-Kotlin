@@ -1,5 +1,6 @@
 package com.example.fittracker.logic
 
+// Just a helper class for the Running Activity step counter, seperated to be able to be tested
 class StepCounterHelper {
 
     private var startSteps: Int = -1

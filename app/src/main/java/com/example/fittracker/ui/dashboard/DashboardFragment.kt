@@ -17,6 +17,29 @@ import com.example.fittracker.data.local.db.AppDatabase
 import com.example.fittracker.databinding.FragmentDashboardBinding
 import kotlinx.coroutines.launch
 
+
+/**
+ * DashboardFragment
+ *
+ * Visual dashboard that displays user muscle group activity using an body graph/muscles vector.
+ *
+ * Responsibilities:
+ * - Retrieves and displays training volume per muscle group from [DashboardViewModel].
+ * - Visualizes training intensity by coloring body parts with different colors based on training
+ * volume.
+ * - Highlights the top 3 most-trained muscle groups.
+ *
+ * Features:
+ * - Dynamically overlays drawable muscle group images and tints them based on user data.
+ * - Assigns color levels: Bronze, Silver, Gold, Diamond, Champion — based on volume val.
+ * - Reactively updates the dashboard using Kotlin Flows and [lifecycleScope].
+ *
+ * Dependencies:
+ * - [AppDatabase]: Provides access to exercise and workout DAOs.
+ * - [DashboardViewModel]: Supplies volume data per muscle group.
+ *
+ * Layout: `fragment_dashboard.xml`
+ */
 class DashboardFragment : Fragment() {
 
     private val viewModel: DashboardViewModel by viewModels {

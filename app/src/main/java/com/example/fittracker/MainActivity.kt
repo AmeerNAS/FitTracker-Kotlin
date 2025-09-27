@@ -13,6 +13,20 @@ import com.example.fittracker.data.local.db.AppDatabase
 import com.example.fittracker.databinding.ActivityMainBinding
 import com.example.fittracker.ui.util.applySystemBarPadding
 
+/**
+ * MainActivity
+ *
+ * The primary Activity hosting the app's navigation and UI container.
+ * single entry point for navigation and screen display
+ * within the app, leveraging Jetpack Navigation for fragment management.
+ *
+ * Responsibilities:
+ * - Sets up the main view binding and content view.
+ * - Configures window insets to allow content to draw behind system bars.
+ * - Initializes the Navigation Component with NavHostFragment and NavController.
+ * - Connects the bottom navigation view with the NavController for: Home, Dashboard, and Exercises.
+ * - Applies system bar padding to ensure proper layout adjustments with system UI.
+ */
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding

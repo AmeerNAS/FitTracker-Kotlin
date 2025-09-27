@@ -22,6 +22,31 @@ import com.example.fittracker.ui.util.applySystemBarPadding
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
+/**
+ * ExercisesFragment
+ *
+ * A Fragment that displays a list of available exercises.
+ *
+ * Responsibilities:
+ * - Loads exercise data from the [ExercisesVM] ViewModel.
+ * - Displays the exercises in a RecyclerView using [ExercisesAdapter].
+ *
+ * Navigates to:
+ *   - [ExerciseDetailActivity] when an exercise is selected.
+ *   - [AddExerciseActivity] to create a new exercise.
+ * - Seeds default exercises into the database if none exist.
+ *
+ * Features:
+ * Uses Kotlin Flows to observe exercise data reactively.
+ * Handles lifecycle-aware collection via [lifecycleScope].
+ * Applies padding to the RecyclerView to accommodate system bars.
+ *
+ * Dependencies:
+ * - [ExerciseRepo]: for retrieving and seeding exercises.
+ * - [AppDatabase]: for accessing local database DAOs.
+ *
+ * Layout: `fragment_exercises.xml`
+ */
 class ExercisesFragment : Fragment() {
 
     private val viewModel: ExercisesVM by viewModels {

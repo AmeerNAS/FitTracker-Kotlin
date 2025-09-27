@@ -19,9 +19,14 @@ import com.example.fittracker.ui.exercises.detail.ExerciseDetailAcTimer.Companio
 
 //leider, idk how to test the sensor in a real example, for now only placeholder shows
 
-/* Running Exercise Activity
-* responsible for controlling the
-* */
+/**
+ * RunningActivity
+ *
+ * This activity tracks a running exercise by:
+ * - Starting a timer (chronometer)
+ * - Counting steps using the step counter sensor
+ * - Returning results (steps + time) to the calling activity
+ */
 class RunningActivity : AppCompatActivity(), SensorEventListener {
 
     private lateinit var binding: ActivityExerciseRunningTimerBinding
